@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expenses</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    th, td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+    }
+
+    tr:hover {
+        background-color: #f5f5f5;
+    }
+
+    a {
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    button {
+        padding: 6px 12px;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        box-sizing: border-box;
+        margin-left: 10px;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+    </style>
+</head>
+<body>
+    <h1>Expenses</h1>
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Person</th>
+            <th>Category</th>
+            <th>Expense</th>
+        </tr>
+        {% for expense in expenses %}
+        <tr>
+            <td>{{ expense.date }}</td>
+            <td>{{ expense.person }}</td>
+            <td>{{ expense.category }}</td>
+            <td>{{ expense.amount }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="{{ url_for('home') }}"><button>Go Back</button></a>
+</body>
+</html>

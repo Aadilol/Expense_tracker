@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expense Sharing App - Categories</title>
+</head>
+<body>
+    <a href="{{ url_for('home') }}"><button>Go Back</button></a>  <!-- Added Go Back button -->
+    <h1>Expense Sharing App - Categories</h1>
+    <ul>
+        {% for category in categories %}
+            <li>{{ category }}</li>
+            <li>{{date}}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

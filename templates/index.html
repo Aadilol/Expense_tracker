@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expense Tracker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 100%;
+            margin: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        
+        form {
+            margin-bottom: 10px;
+        }
+        
+        form input[type="text"], form input[type="number"], form select {
+            padding: 6px;
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+        
+        form input[type="submit"] {
+            padding: 6px 12px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        form input[type="date"] {
+            margin-top: 5px;
+        }
+
+        form input{
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+        button {
+            padding: 6px 12px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            width: 25%;
+            box-sizing: border-box;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+
+        label{
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Tracker</h1>
+        <form action="/add_expense" method="POST">
+            <label for="amount">Amount:</label>
+            <input type="number" name="amount" required>
+            <br>
+
+            <label for="category">Category:</label>
+            <input type="text" name="category" required>
+            <br>
+
+            <label for="person">Person:</label>
+            <input type="text" name="person" required> 
+                 
+            <label for="date">Date:</label>
+            <input type="date" name="date" required>
+            <br>
+            
+            <input type="submit" value="Add Expense">
+        </form>
+        <a href="/view_expenses"><button>View Log</button></a>
+        <a href="/view_persons"><button>View Tabs</button></a>
+    </div>
+</body>
+</html
