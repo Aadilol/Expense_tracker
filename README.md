@@ -1,3 +1,3 @@
 # Expense_tracker
->run py file
+>run py app.pyy 
 >follow the link
